@@ -6,6 +6,8 @@ alias ll='ls -alF'
 alias l='ls -CF'
 alias pyo='python'
 alias wt='cd /home/anshuman/waterbud'
+alias sound_restart='pulseaudio -k && sudo alsa force-reload'
+alias net_restart='/etc/init.d/networking restart'
 
 # Reset
 Color_Off='\e[0m'       # Text Reset
