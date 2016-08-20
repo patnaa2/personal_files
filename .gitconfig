@@ -1,0 +1,22 @@
+[user]
+	name = Anshuman Patnaik
+	email = anshuman.patnaik2008@gmail.com
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+[web]
+	browser = google-chrome
+[alias]
+    co = checkout
+    br = branch
+    f = fetch
+    g = grep
+    p = push
+    c = commit
+    s = stash
+    rb = rebase
+    st = status
+    d = diff
+    dfo = diff origin/master
+    cp = cherry-pick
