@@ -27,3 +27,10 @@ branch_color() {
 }
 
 PS1="\u@\h:\w\[\$(branch_color)\]\$(__git_ps1)\[\e[0m\]\$ "
+
+function xe_latex() {
+    file_name=$(echo $1 | awk -F"." '{print $1}')
+    xelatex $1
+    xdg-open ${file_name}.pdf
+}
+

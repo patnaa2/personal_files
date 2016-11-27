@@ -7,6 +7,8 @@
 	excludesfile = ~/.gitignore
 [web]
 	browser = google-chrome
+[color]
+    ui = auto
 [alias]
     co = checkout
     br = branch
@@ -20,3 +22,5 @@
     d = diff
     dfo = diff origin/master
     cp = cherry-pick
+    rbm = rebase origin/master
+    rv = revert
