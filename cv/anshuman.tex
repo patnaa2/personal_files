@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%
+% Credits
+% Format and usage inspired by to CV template created using altacv.cls written by LianTze Lim (liantze@gamil.com).
+%
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+\documentclass[10pt,a4paper,academicons]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% mainfont
+\setmainfont{Lato}
+
+% colors 
+\definecolor{Light Blue}{HTML}{336699}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Blue}{HTML}{003366}
+\colorlet{heading}{Blue}
+\colorlet{accent}{Light Blue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% bullets for skills listed 
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Anshuman Patnaik}
+\tagline{Software Engineer}
+\personalinfo{%
+  \email{a3patnaik@uwaterloo.ca}
+  \phone{519-574-9852}
+  \linkedin{linkedin.com/in/a3patnaik}
+  \github{github.com/patnaa2}
+}
+
+\begin{adjustwidth}{}{-8cm}
+\makecvheader
+\end{adjustwidth}
+
+\cvsection[sidebar]{Experience}
+
+\cvevent{Infrastructure Engineer}{Wish}{Jan 2016 -- Apr 2016, Aug 2016 - Dec 2016}{San Francisco, CA}
+\begin{itemize}
+\item Established a framework to allow developers to have on-demand migrations to denormalize collections.
+\item Designed and built a framework to execute tools, commands and monitor the entire MongoDB cluster.
+\item Built automation to launch a production ready sharded MongoDB cluster in AWS in 5 minutes.
+\item Faciliated several cluster wide MongoDB migrations using Chef and  in-house orchestration scripts.
+\item Developed a log parsing tool to detect bad queries ad-hoc.
+\item Optimized existing linters to statically analyze queries and warn/hint users about missing indexes and bad queries. 
+\end{itemize}
+
+\divider
+
+\cvevent{Database Engineer}{Rubicon Project}{May 2015 -- Aug 2015}{Los Angeles, CA}
+\begin{itemize}
+\item Maintained and optimized production MySQL database clusters through tasks such as query optimization, load balancing, and database backups.
+\item Designed and built a dashboard using a ruby based framework to display critical system health/task metrics.
+\end{itemize}
+
+\divider
+
+\cvevent{IT Specialist}{TD Bank}{Sep 2014 -- Dec 2014}{Toronto, ON}
+\begin{itemize}
+\item Automated and integrated various third party solutions into the first private IAAS and PAAS offering at TD.
+\end{itemize}
+
+\divider
+
+\cvevent{IT Systems Administrator}{TD Bank}{Jan 2014 -- Dec 2014}{Toronto, ON}
+\begin{itemize}
+\item Designed, implemented and managed two Django Web Portals for automating infrastructure tools.
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{WaterBud}{}{}{}
+Prototyped an inline water sensor solution with Rasperry Pi, tornado, flask, and python capturing realtime and detailed breakdown of water use in a household.
+
+\divider
+
+\cvevent{Monocle}{}{}{}
+Real-time MongoDB cluster health visualizer built using d3 and Flask.
+
+\medskip
+
+\end{document}
