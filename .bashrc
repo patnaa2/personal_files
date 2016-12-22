@@ -34,3 +34,18 @@ function xe_latex() {
     xdg-open ${file_name}.pdf
 }
 
+function router() {
+    route -n | tail -n 3 | head -n 1 | awk '{print $2}'
+}
+
+function pingr() {
+    ping -c 3 $(router)
+}
+
+function pingg() {
+    ping -c 3 google.com
+}
+
+function traceg() {
+    traceroute google.ca
+}
