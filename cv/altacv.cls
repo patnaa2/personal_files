@@ -101,7 +101,7 @@
     \medskip
     {\large\bfseries\color{accent}\@tagline\par}
     \medskip
-    {\footnotesize\bfseries\@personalinfo\par}
+    {\small\bfseries\@personalinfo\par}
     \ifdef{\@photodiameter}{%
     \end{minipage}\hfill%
     \begin{minipage}{\@photodiameter}
