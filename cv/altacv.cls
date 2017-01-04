@@ -54,6 +54,11 @@
 \RequirePackage{dashrule}
 \RequirePackage{multirow,tabularx}
 \RequirePackage{changepage}
+\RequirePackage{hyperref}
+
+\hypersetup{
+    hidelinks=True
+}
 % \RequirePackage{marginfix}
 
 \setlength{\parindent}{0pt}
@@ -70,6 +75,7 @@
 \newcommand{\mailsymbol}{\faEnvelope}
 
 \newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{#1}\hspace{0.5em}#2\hspace{2em}}}
+\newcommand{\printurlinfo}[2]{\mbox{\textcolor{accent}{#1}\hspace{0.5em}\href{http://#2}{#2}\hspace{2em}}}
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
@@ -77,10 +83,10 @@
 \newcommand{\email}[1]{\printinfo{\emailsymbol}{#1}}
 \newcommand{\mailaddress}[1]{\printinfo{\mailsymbol}{#1}}
 \newcommand{\phone}[1]{\printinfo{\phonesymbol}{#1}}
-\newcommand{\homepage}[1]{\printinfo{\homepagesymbol}{#1}}
+\newcommand{\homepage}[1]{\printurlinfo{\homepagesymbol}{#1}}
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
-\newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
-\newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
+\newcommand{\linkedin}[1]{\printurlinfo{\linkedinsymbol}{#1}}
+\newcommand{\github}[1]{\printurlinfo{\githubsymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
 
@@ -112,13 +118,12 @@
   {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
 }
 
-\newcommand{\cvsubsection}[1]{%
-  \smallskip%
+\newcommand{\cvsubsection}[1]{
   {\color{emphasis}\large\bfseries{#1}\par}\medskip
 }
 
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
+  {\large\color{emphasis}\bfseries#1\par}
   {\ifstrequal{#2}{}{}{\smallskip\textbf{\color{accent}#2}\par}
   {\ifstrequal{#3}{}{}{\smallskip\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
   \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\hspace{7em}\faMapMarker\hspace{0.5em}#4}}}\par\medskip}
