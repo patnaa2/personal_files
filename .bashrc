@@ -31,7 +31,18 @@ PS1="\u@\h:\w\[\$(branch_color)\]\$(__git_ps1)\[\e[0m\]\$ "
 function xe_latex() {
     file_name=$(echo $1 | awk -F"." '{print $1}')
     xelatex $1
-    xdg-open ${file_name}.pdf
+    # do some error checking, don't open pdf file if
+    # we couldnt compile it properly  
+    rc=$?
+    echo $rc
+    if [[ $rc == 0 ]] ;  then
+        xdg-open ${file_name}.pdf
+    fi
+
+	# cp to different path if specified
+    if [[ -n "$2" ]] ; then
+        cp ${file_name}.pdf $2
+    fi
 }
 
 function router() {
