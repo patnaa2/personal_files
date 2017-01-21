@@ -60,3 +60,7 @@ function pingg() {
 function traceg() {
     traceroute google.ca
 }
+
+function nb() {
+    git co -b $1 origin/master
+}
