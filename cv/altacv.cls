@@ -137,6 +137,14 @@
   \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\hspace{7em}\faMapMarker\hspace{0.5em}#4}}}\par\medskip}
 }}
 
+\newcommand{\cvsidebarevent}[4]{%
+  {\large\color{emphasis}\bfseries#1\par}
+  {\ifstrequal{#2}{}{}{\smallskip\textbf{\color{accent}#2}\par}
+  {\ifstrequal{#3}{}{}{\smallskip\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
+  \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\hspace{3em}\faMapMarker\hspace{0.5em}#4}}}\par\medskip}
+}}
+
+
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
   \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
